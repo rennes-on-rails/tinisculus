@@ -14,7 +14,7 @@ class Wheel
   end
   def self.encode( char, position )
     charpos = self.findindex(char)
-    self.charset[charpos + position]
+    self.charset[(charpos + position) % self.charset.count]
   end
   def self.findindex(char)
     self.charset.index(char)
@@ -53,5 +53,8 @@ describe Wheel do
       Wheel.encode( ' ', 1 ).should == '0'
     end
     
+    it "encodes a message : 'aa'" do
+      Wheel.encode('aa', 0).should == 'aa'
+    end
   end
 end
