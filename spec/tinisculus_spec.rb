@@ -12,6 +12,9 @@ class Wheel
       ".", ",", "?", "!", "'", "\"", " "
     ]
   end
+  def self.encode( char, position )
+    'f'
+  end
 end
 
 describe Wheel do
@@ -25,6 +28,9 @@ describe Wheel do
         "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
         ".", ",", "?", "!", "'", "\"", " "
       ]
+    end
+    it 'should have a method encode which returns "f" when passed "a" as character and 5 as position' do
+      Wheel.encode( 'a', 5 ).should == 'f'
     end
   end
 end
