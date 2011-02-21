@@ -1,0 +1,3 @@
+module Tinisculus
+  # Your code goes here...
+end
