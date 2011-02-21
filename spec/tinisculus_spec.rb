@@ -12,9 +12,10 @@ class Wheel
       ".", ",", "?", "!", "'", "\"", " "
     ]
   end
-  def self.encode( char, position )
-    charpos = self.findindex(char)
-    self.charset[(charpos + position) % self.charset.count]
+  def self.encode( message, position )
+    message.chars.collect do |char|
+      self.charset[(self.findindex(char) + position) % self.charset.count]
+    end.join
   end
   def self.findindex(char)
     self.charset.index(char)
