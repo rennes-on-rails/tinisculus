@@ -15,6 +15,7 @@ class Wheel
   def self.encode( char, position )
     'f'
   end
+  #def self.findindex
 end
 
 describe Wheel do
@@ -31,6 +32,12 @@ describe Wheel do
     end
     it 'should have a method encode which returns "f" when passed "a" as character and 5 as position' do
       Wheel.encode( 'a', 5 ).should == 'f'
+    end
+    #it 'should have a method encode which returns "h" when passed "c" as character and 5 as position' do
+    #  Wheel.encode( 'c', 5 ).should == 'h'
+    #end
+    it 'should have a method findindex which returns 0 when pass "0"' do
+      Wheel.findindex( "0").should == 0
     end
   end
 end
