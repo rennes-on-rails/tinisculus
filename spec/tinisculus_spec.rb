@@ -33,6 +33,9 @@ describe Wheel do
         ".", ",", "?", "!", "'", "\"", " "
       ]
     end
+  end
+  
+  describe "encode" do
     it 'should have a method encode which returns "f" when passed "a" as character and 5 as position' do
       Wheel.encode( 'a', 5 ).should == 'f'
     end
@@ -45,5 +48,10 @@ describe Wheel do
     it 'should have a method findindex which returns 10 when pass "A"' do
       Wheel.findindex( "A").should == 10
     end
+    
+    it 'cycles in charset when position overflows' do
+      Wheel.encode( ' ', 1 ).should == '0'
+    end
+    
   end
 end
