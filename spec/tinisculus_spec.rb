@@ -16,7 +16,7 @@ class Wheel
     'f'
   end
   def self.findindex(char)
-    0
+    self.charset.index(char)
   end
 end
 
@@ -40,6 +40,9 @@ describe Wheel do
     #end
     it 'should have a method findindex which returns 0 when pass "0"' do
       Wheel.findindex( "0").should == 0
+    end
+    it 'should have a method findindex which returns 10 when pass "A"' do
+      Wheel.findindex( "A").should == 10
     end
   end
 end
