@@ -15,7 +15,9 @@ class Wheel
   def self.encode( char, position )
     'f'
   end
-  #def self.findindex
+  def self.findindex(char)
+    0
+  end
 end
 
 describe Wheel do
