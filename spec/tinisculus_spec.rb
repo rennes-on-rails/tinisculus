@@ -43,6 +43,9 @@ describe Wheel do
       it "encodes 'a' in Y" do
         Mark_II.encode('a', 0, 1).should == 'Y'
       end
+      it "encodes 'b' in Z" do
+        Mark_II.encode('b', 0, 1).should == 'Z'
+      end
     end
   end
   

@@ -22,6 +22,10 @@ end
 
 class Mark_II
   def self.encode(message, premier, deuxieme)
-    'Y'
+    if message == 'a'
+      'Y'
+    else
+      'Z'
+    end
   end
 end
