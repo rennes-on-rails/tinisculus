@@ -22,10 +22,6 @@ end
 
 class Mark_II
   def self.encode(message, premier, deuxieme)
-    if message == 'a'
-      'Y'
-    else
-      'Z'
-    end
+      Wheel.encode(message, premier -2*deuxieme)
   end
 end

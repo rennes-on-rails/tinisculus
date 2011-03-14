@@ -37,7 +37,7 @@ describe Wheel do
       Wheel.encode('aa', 0).should == 'aa'
     end
   end
-  
+  # Quelques tests
   describe "Mark_II" do
     context "with position [0, 1]" do
       it "encodes 'a' in Y" do
@@ -45,6 +45,18 @@ describe Wheel do
       end
       it "encodes 'b' in Z" do
         Mark_II.encode('b', 0, 1).should == 'Z'
+      end
+      it "encodes '6' in 0" do
+        Mark_II.encode('6', 0, 3).should == '0'
+      end
+      it "encodes 'g' in a" do
+        Mark_II.encode('g', 0, 3).should == 'a'
+      end
+      it "encodes a message : 'aa'" do
+        Mark_II.encode('aa', 0, 3).should == 'UU'
+      end
+      it "encodes a message : 'aa'" do
+        Mark_II.encode('aa', 1, 3).should == 'VV'
       end
     end
   end
