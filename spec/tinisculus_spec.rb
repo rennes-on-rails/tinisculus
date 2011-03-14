@@ -37,4 +37,13 @@ describe Wheel do
       Wheel.encode('aa', 0).should == 'aa'
     end
   end
+  
+  describe "Mark_II" do
+    context "with position [0, 1]" do
+      it "encodes 'a' in Y" do
+        Mark_II.encode('a', 0, 1).should == 'Y'
+      end
+    end
+  end
+  
 end

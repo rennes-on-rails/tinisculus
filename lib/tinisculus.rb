@@ -11,11 +11,17 @@ class Wheel
     ]
   end
   def self.encode( message, position )
-    message.chars.collect do |char|
-      self.charset[(self.findindex(char) + position) % self.charset.count]
-    end.join
+    message.chars.reduce('') do |acc,char|
+      acc << self.charset[(self.findindex(char) + position) % self.charset.count]
+    end
   end
   def self.findindex(char)
     self.charset.index(char)
+  end
+end
+
+class Mark_II
+  def self.encode(message, premier, deuxieme)
+    'Y'
   end
 end
