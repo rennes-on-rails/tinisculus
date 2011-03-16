@@ -9,6 +9,13 @@ It uses a [tinisculapp](http://tinisculapp.heroku.com) front end, so that what i
 
 tinisculapp is hosted on [heroku](http://heroku.com/) and code is available on [github](https://github.com/rennes-on-rails/tinisculapp)
 
+Launch test:
+* One time:
+rspec spec/
+* On all change:
+guard
+Crtl-\ => Relaunch all tests
+Test was relaunch on all modifications
 
 14/03/2011
 ----------
