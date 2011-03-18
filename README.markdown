@@ -9,6 +9,10 @@ It uses a [tinisculapp](http://tinisculapp.heroku.com) front end, so that what i
 
 tinisculapp is hosted on [heroku](http://heroku.com/) and code is available on [github](https://github.com/rennes-on-rails/tinisculapp)
 
+Install gems:
+----------
+bundle install
+
 Launch test:
 ----------
 * One time: "rspec spec/"
