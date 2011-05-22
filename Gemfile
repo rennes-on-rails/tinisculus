@@ -4,14 +4,12 @@ group :development, :test do
   gem 'rspec'
   gem 'guard'
   gem 'guard-rspec'
-end
-
-platforms :darwin do
-  gem 'rb-fsevent'
-  gem 'growl'
-end
-
-platforms :linux do
-  gem 'rb-inotify'
-  gem 'libnotify'
+  if RUBY_PLATFORM =~ /darwin/i
+    gem 'rb-fsevent'
+    gem 'growl'
+  end
+  if RUBY_PLATFORM =~ /linux/i
+    gem 'rb-inotify'
+    gem 'libnotify'
+  end
 end
